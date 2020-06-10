@@ -1,15 +1,19 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View``;
+export const Container = styled.View`
+  margin-bottom: 15px;
+`;
 export const HeaderPost = styled.View`
   border: #000;
-  border-width: 1px;
+  border-width: 0px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   height: 44px;
+  margin-left: 5px;
+  margin-right: 5px;
 `;
-export const PictureContainer = styled.View`
+export const PhotoCard = styled.View`
   border: #000;
   border-width: 1px;
   flex-direction: row;
@@ -27,17 +31,20 @@ export const Picture = styled.Image`
 
 export const BottomBar = styled.View`
   border: #000;
-  border-width: 1px;
+  border-width: 0px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   height: 44px;
+  margin-right: 5px;
 `;
 
 export const CommentsBox = styled.View`
   border: #000;
-  border-width: 1px;
+  border-width: 0px;
   padding: 4px;
+  margin-left: 5px;
+  margin-right: 5px;
 `;
 
 export const CommentsItem = styled.View`

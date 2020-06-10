@@ -9,6 +9,7 @@ export const StoriesContainer = styled.View`
   background: #fff;
   height: 120px;
   text-align: auto;
+  border-bottom-width: 1px;
 `;
 
 export const StoryLabel = styled.Text`

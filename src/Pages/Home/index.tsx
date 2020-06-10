@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import {
   Container,
@@ -24,9 +24,13 @@ const Home: React.FC = () => {
   return (
     <Container>
       <TopBar>
-        <Icon name="camera" size={32} style={{marginLeft: 10}} />
+        <TouchableOpacity>
+          <Icon name="camera" size={32} style={{marginLeft: 10}} />
+        </TouchableOpacity>
         <Text>NATIVEGRAM</Text>
-        <Icon name="send" size={32} style={{marginRight: 10}} />
+        <TouchableOpacity>
+          <Icon name="send" size={32} style={{marginRight: 10}} />
+        </TouchableOpacity>
       </TopBar>
 
       <FeedContainer>
@@ -34,6 +38,16 @@ const Home: React.FC = () => {
           <StoryItem>
             <AvatarStoryPhoto image={dummyUser4} size={64} />
             <StoryLabel>Your Story</StoryLabel>
+            <View
+              style={{
+                position: 'absolute',
+                backgroundColor: '#43aca4',
+                borderRadius: 50,
+                right: 5,
+                bottom: 5,
+              }}>
+              <Icon name="plus-circle" size={18} />
+            </View>
           </StoryItem>
           <StoryItem>
             <AvatarStoryPhoto image={dummyUser2} size={64} />

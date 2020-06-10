@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 
 import {
   Container,
   HeaderPost,
-  PictureContainer,
+  PhotoCard,
   BottomBar,
   Picture,
   CommentsBox,
@@ -24,19 +24,51 @@ const FeedPost: React.FC = () => {
   return (
     <Container>
       <HeaderPost>
-        <AvatarStoryPhoto image={dummyUser4} size={32} />
-        <Text>vulgomatt</Text>
-        <Icon name="more-vertical" size={32} />
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}>
+          <AvatarStoryPhoto image={dummyUser4} size={28} />
+          <View style={{alignItems: 'center'}}>
+            <Text style={{marginLeft: 10, fontSize: 16, fontWeight: 'bold'}}>
+              vulgomatt
+            </Text>
+            <Text style={{fontSize: 14}}>São Paulo</Text>
+          </View>
+        </View>
+        <TouchableOpacity>
+          <Icon name="more-vertical" size={32} />
+        </TouchableOpacity>
       </HeaderPost>
-      <PictureContainer>
+      <PhotoCard>
         <Picture source={avatarImg} style={{resizeMode: 'stretch'}} />
-      </PictureContainer>
+      </PhotoCard>
       <BottomBar>
-        <Icon name="heart" size={32} />
-        <Icon name="message-circle" size={32} />
-        <Icon name="send" size={32} />
-        <Text>vulgomatt</Text>
-        <Icon name="bookmark" size={32} />
+        <View
+          style={{
+            marginLeft: 5,
+            flexDirection: 'row',
+            width: 130,
+            justifyContent: 'space-between',
+          }}>
+          <TouchableOpacity>
+            <Icon name="heart" size={32} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Icon name="message-circle" size={32} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Icon name="send" size={32} />
+          </TouchableOpacity>
+        </View>
+        <View>
+          <Text />
+        </View>
+        <TouchableOpacity>
+          <Icon name="bookmark" size={32} />
+        </TouchableOpacity>
       </BottomBar>
       <CommentsBox>
         <CommentsItem>
@@ -54,9 +86,12 @@ const FeedPost: React.FC = () => {
             ver todos os 160 comentários{' '}
           </Text>
         </CommentsItem>
-        <CommentsItem>
-          <Text style={{fontWeight: 'bold'}}>zuck : </Text>
-          <Text>Muito bom hein! </Text>
+        <CommentsItem
+          style={{justifyContent: 'space-between', marginRight: 10}}>
+          <View style={{flexDirection: 'row'}}>
+            <Text style={{fontWeight: 'bold'}}>zuck : </Text>
+            <Text>Muito bom hein! </Text>
+          </View>
           <Icon name="heart" />
         </CommentsItem>
         <CommentsItem
@@ -70,9 +105,8 @@ const FeedPost: React.FC = () => {
           <Text>valeu mestre </Text>
         </CommentsItem>
         <CommentsItem>
-          <Text style={{fontStyle: 'italic'}}>
-            há 16 minutos - Ver tradução
-          </Text>
+          <Text style={{fontStyle: 'italic'}}>há 16 minutos - </Text>
+          <Text style={{fontWeight: 'bold'}}>Ver tradução</Text>
         </CommentsItem>
       </CommentsBox>
     </Container>

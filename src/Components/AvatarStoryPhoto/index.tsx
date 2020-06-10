@@ -1,7 +1,6 @@
 import React from 'react';
-import {} from 'react-native';
 
-import {StoryImage} from './styles';
+import {StoryImage, Container} from './styles';
 
 interface IAvatarStoryPhotoProps {
   image: any;
@@ -9,7 +8,11 @@ interface IAvatarStoryPhotoProps {
 }
 
 const AvatarStoryPhoto: React.FC<IAvatarStoryPhotoProps> = ({image, size}) => {
-  return <StoryImage source={image} style={{width: size, height: size}} />;
+  return (
+    <Container>
+      <StoryImage source={image} style={{width: size, height: size}} />
+    </Container>
+  );
 };
 
 export default AvatarStoryPhoto;
