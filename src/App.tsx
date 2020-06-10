@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import Home from './Pages/Home/';
 import Icon from 'react-native-vector-icons/Feather';
 import {shade} from 'polished';
+import {StatusBar} from 'react-native';
 const BottomTab = createBottomTabNavigator();
 
 // import { Container } from './styles';
@@ -12,6 +13,7 @@ const BottomTab = createBottomTabNavigator();
 const App: React.FC = () => {
   return (
     <NavigationContainer>
+      <StatusBar backgroundColor={'#3e3e3e'} />
       <BottomTab.Navigator
         initialRouteName="Home"
         tabBarOptions={{showLabel: false, activeTintColor: '#000'}}>
