@@ -6,9 +6,9 @@ import Home from './Pages/Home/';
 import Icon from 'react-native-vector-icons/Feather';
 import {shade} from 'polished';
 import {StatusBar} from 'react-native';
+import AvatarStoryPhoto from './Components/AvatarStoryPhoto';
 const BottomTab = createBottomTabNavigator();
-
-// import { Container } from './styles';
+import dummyUser2 from '../src/assets/dummyUser2.png';
 
 const App: React.FC = () => {
   return (
@@ -76,11 +76,7 @@ const App: React.FC = () => {
           component={Home}
           options={{
             tabBarIcon: ({color, size, focused}) => (
-              <Icon
-                name="circle"
-                color={focused ? color : shade('0.2', color)}
-                size={focused ? 38 : 32}
-              />
+              <AvatarStoryPhoto image={dummyUser2} size={28} />
             ),
           }}
         />
