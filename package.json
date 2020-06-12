@@ -1,5 +1,6 @@
 {
-  "name": "appnativegram",
+  "name": "Nativegram - Study",
+  "author": "Matheus Vargem",
   "version": "0.0.1",
   "private": true,
   "scripts": {
