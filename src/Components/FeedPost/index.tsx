@@ -3,14 +3,10 @@ import {View, Text, TouchableOpacity, TextInput} from 'react-native';
 import {
   Container,
   HeaderPost,
-  PhotoCard,
-  BottomBar,
-  Picture,
   CommentsBox,
   CommentsItem,
   FeedPostHeader,
   PostOwnerName,
-  BottomButtons,
   CommentsResponseItem,
   CommentsMessageItem,
   Message,
@@ -26,7 +22,7 @@ import dummyUser5 from '../../assets/dummyUser5.png';
 import dummyUser6 from '../../assets/dummyUser6.png';
 import AvatarStoryPhoto from '../../Components/AvatarStoryPhoto/';
 import ToggleButton from '../ToggleButton';
-
+import Photocard from '../PhotoCard/';
 interface IPostComment {
   author: string;
   message: string;
@@ -72,35 +68,7 @@ const FeedPost: React.FC<IFeedPost> = (PostData: IFeedPost) => {
           <FeatherIcon name="more-vertical" size={24} />
         </TouchableOpacity>
       </HeaderPost>
-      <PhotoCard>
-        <Picture
-          source={PostData.postContent[0]}
-          style={{resizeMode: 'stretch'}}
-        />
-      </PhotoCard>
-      <BottomBar>
-        <BottomButtons>
-          <ToggleButton
-            size={32}
-            icon={{icon: 'heart-outline', color: '#000'}}
-            iconToggled={{icon: 'heart', color: '#DA2E33'}}
-          />
-          <TouchableOpacity>
-            <Icon name="message-outline" size={32} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <FeatherIcon name="send" size={30} />
-          </TouchableOpacity>
-        </BottomButtons>
-
-        <TouchableOpacity>
-          <ToggleButton
-            size={32}
-            icon={{icon: 'bookmark-outline', color: '#000'}}
-            iconToggled={{icon: 'bookmark', color: '#000'}}
-          />
-        </TouchableOpacity>
-      </BottomBar>
+      <Photocard postContent={[...PostData.postContent]} />
       <CommentsBox>
         {/* Header */}
         {PostData.likes.length >= 1 && (
