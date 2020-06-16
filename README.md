@@ -55,5 +55,10 @@ OBS : Only tested on Android
 Give a ⭐️ if this project helped you!
 You can fork it and submit some critics! I would like to hear some experts and improve myself.
 
+## Image's credits
+
+The images/photos presented in this study were taken from Pixabay. The authors are in credits.txt 
+
+
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
