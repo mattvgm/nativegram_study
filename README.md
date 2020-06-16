@@ -4,6 +4,7 @@
 </p>
 
 ![](nativegram.gif)
+![](nativegram2.gif)
 
 
 > This project was aimed to study and achieve a lookalike Instagram interface. It's completly Open-Source and non-commercial. 

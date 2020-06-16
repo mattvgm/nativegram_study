@@ -8,6 +8,7 @@ import dummyUser6 from '../assets/dummyUser6.png';
 
 import hi from '../assets/hi.png';
 import {IFeedPost} from 'src/Components/FeedPost';
+import {IStoryItem} from 'src/Components/StoriesBar';
 
 export const fakePosts: IFeedPost[] = [
   {
@@ -79,5 +80,33 @@ export const fakePosts: IFeedPost[] = [
         response: 'Thanks!',
       },
     ],
+  },
+];
+
+export const fakeStoriesList: IStoryItem[] = [
+  {
+    name: 'aliceane_',
+    profilePic: dummyUser3,
+    type: 'seen',
+  },
+  {
+    name: 'markstra...',
+    profilePic: dummyUser1,
+    type: 'close',
+  },
+  {
+    name: 'marieanne',
+    profilePic: dummyUser4,
+    type: 'regular',
+  },
+  {
+    name: 'claradoe',
+    profilePic: dummyUser5,
+    type: 'regular',
+  },
+  {
+    name: 'patriciad...',
+    profilePic: dummyUser6,
+    type: 'regular',
   },
 ];

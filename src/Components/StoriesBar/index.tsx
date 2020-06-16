@@ -16,39 +16,13 @@ import dummyUser5 from '../../assets/dummyUser5.png';
 import dummyUser6 from '../../assets/dummyUser6.png';
 import Icon from 'react-native-vector-icons/Feather';
 
-interface IStoryItem {
+export interface IStoryItem {
   name: string;
   profilePic: any;
   type: 'none' | 'regular' | 'close' | 'seen';
 }
 
-const fakeStoriesList: IStoryItem[] = [
-  {
-    name: 'aliceane_',
-    profilePic: dummyUser3,
-    type: 'seen',
-  },
-  {
-    name: 'markstra...',
-    profilePic: dummyUser1,
-    type: 'close',
-  },
-  {
-    name: 'marieanne',
-    profilePic: dummyUser4,
-    type: 'regular',
-  },
-  {
-    name: 'claradoe',
-    profilePic: dummyUser5,
-    type: 'regular',
-  },
-  {
-    name: 'patriciad...',
-    profilePic: dummyUser6,
-    type: 'regular',
-  },
-];
+import {fakeStoriesList} from '../../config/index';
 
 const StoriesBar: React.FC = () => {
   return (

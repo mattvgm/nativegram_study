@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   border: #000;
-  border-width: 1px;
+  border-width: 0px;
   margin-left: 0px;
   flex-direction: row;
   align-items: center;
@@ -14,10 +14,10 @@ export const Container = styled.View`
 export const ContentCount = styled.View`
   position: absolute;
   width: 40px;
-  height: 30px;
+  height: 25px;
   top: 10px;
-  right: 50px;
-  background-color: rgba(0, 0, 0, 0.3);
+  right: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
   border-width: 0;
   z-index: 10;
   border-radius: 50px;
@@ -28,7 +28,7 @@ export const ContentCount = styled.View`
 
 export const Picture = styled.Image`
   height: 395px;
-  width: 390px;
+  width: 393px;
 `;
 
 export const BottomBar = styled.View`
